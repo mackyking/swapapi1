@@ -855,7 +855,7 @@ app.post('/get-user-transactions', async (req, res) => {
         let f3LivePrice;
 
         try {
-          const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price');
+          const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price');
           f3LivePrice = priceResponse.data.f3Price;
         } catch (priceError) {
           console.error('Error fetching F3 token price:', priceError);
@@ -946,7 +946,7 @@ app.get('/get-global-transactions', async (req, res) => {
         let f3LivePrice;
 
         try {
-          const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price');
+          const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price');
           f3LivePrice = priceResponse.data.f3Price;
         } catch (priceError) {
           console.error('Error fetching F3 token price:', priceError);
@@ -1012,7 +1012,7 @@ app.post('/get-total-usdt-loggeduser', async (req, res) => {
 
         try {
           // Make a request to your '/get-pair-price' endpoint to get the F3 token price
-          const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price'); // Corrected URL
+          const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price'); // Corrected URL
           f3LivePrice = priceResponse.data.f3Price; // Use the correct property name from the response
         } catch (priceError) {
           // Handle errors when fetching the price
@@ -1085,7 +1085,7 @@ app.get('/get-total-usdt-all-users', async (req, res) => {
 
   try {
     // Make a request to your '/get-pair-price' endpoint to get the F3 token price
-    const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price');
+    const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price');
     f3LivePrice = priceResponse.data.f3Price;
   } catch (priceError) {
     console.error('Error fetching F3 token price:', priceError);
@@ -1184,7 +1184,7 @@ app.post('/get-user-asset-gained', async (req, res) => {
         let f3LivePrice;
 
         try {
-          const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price');
+          const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price');
           f3LivePrice = priceResponse.data.f3Price;
         } catch (priceError) {
           console.error('Error fetching F3 token price:', priceError);
@@ -1280,7 +1280,7 @@ app.get('/get-all-asset-gained', async (req, res) => {
         let f3LivePrice;
 
         try {
-          const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price');
+          const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price');
           f3LivePrice = priceResponse.data.f3Price;
         } catch (priceError) {
           console.error('Error fetching F3 token price:', priceError);
@@ -1563,7 +1563,7 @@ app.post('/getAllTransferedOfuserAllData', async (req, res) => {
         let f3LivePrice;
 
         try {
-          const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price');
+          const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price');
           f3LivePrice = priceResponse.data.f3Price;
         } catch (priceError) {
           console.error('Error fetching F3 token price:', priceError);
@@ -1644,7 +1644,7 @@ app.get('/getAllTransferedOfGlobalAllData', async (req, res) => {
         let f3LivePrice;
 
         try {
-          const priceResponse = await axios.get('https://api-node-1-postapi.vercel.app/get-f3-price');
+          const priceResponse = await axios.get('https://swapapi1.vercel.app/get-f3-price');
           f3LivePrice = priceResponse.data.f3Price;
         } catch (priceError) {
           console.error('Error fetching F3 token price:', priceError);
