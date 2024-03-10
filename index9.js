@@ -1,31 +1,31 @@
-// const Web3 = require('web3');
-// const express = require("express");
-// const app = express();
-// const bodyParser = require("body-parser")
-// const PORT = 4000;
-// const http = require("http");
-// const axios = require('axios');
-// const BSCSCAN_API_KEY = '3WK22B41CG3Y67YFQ6RKJIH778Z9P2Y36J';
-// const server = http.createServer(app);
-// app.use(bodyParser.json({ limit: "100mb", type: "application/json" }));
-// app.use(
-//   bodyParser.urlencoded({
-//     limit: "100mb",
-//     extended: true,
-//   })
-// );
+const Web3 = require('web3');
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser")
+const PORT = 4000;
+const http = require("http");
+const axios = require('axios');
+const BSCSCAN_API_KEY = '3WK22B41CG3Y67YFQ6RKJIH778Z9P2Y36J';
+const server = http.createServer(app);
+app.use(bodyParser.json({ limit: "100mb", type: "application/json" }));
+app.use(
+  bodyParser.urlencoded({
+    limit: "100mb",
+    extended: true,
+  })
+);
 
 
-// app.get('/getGlobalAllSwappedAllDataSpefificsUsing/:txhash', async (req, res) => {
-//   const contractAddress = '0xfB265e16e882d3d32639253ffcfC4b0a2E861467';
-//   const apiKey = BSCSCAN_API_KEY;
-//   const toAddress = '0x11353b85DBf896da69FC045D3c6014874Dfc2Aaa';
-//   const txhash = req.params.txhash; // Extract the transaction hash from the URL
+app.get('/getGlobalAllSwappedAllDataSpefificsUsing/:txhash', async (req, res) => {
+  const contractAddress = '0xfB265e16e882d3d32639253ffcfC4b0a2E861467';
+  const apiKey = BSCSCAN_API_KEY;
+  const toAddress = '0x11353b85DBf896da69FC045D3c6014874Dfc2Aaa';
+  const txhash = req.params.txhash; // Extract the transaction hash from the URL
 
-//   if (!toAddress || !txhash) {
-//     res.status(400).json({ error: 'toAddress and txhash are required in the query parameters' });
-//     return;
-//   }
+  if (!toAddress || !txhash) {
+    res.status(400).json({ error: 'toAddress and txhash are required in the query parameters' });
+    return;
+  }
 
   try {
     const baseUrl = 'https://api.bscscan.com/api';
